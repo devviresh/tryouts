@@ -1,0 +1,109 @@
+body {
+  background-color: #00000015;
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  background-color: #45454510;
+  width: fit-content;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+}
+
+.display #screen {
+  margin-bottom: 0.5rem;
+  width: -webkit-fill-available;
+  height: 70px;
+  font-size: 35px;
+  border: none;
+  outline: none;
+  text-align: right;
+  padding-right: 0.5rem;
+  background: hsl(69, 30%, 94%);
+  border-radius: 6px;
+  box-shadow: inset 8px 8px 8px hsl(69, 30%, 85%),
+    inset -8px -8px 8px hsl(69, 30%, 98%);
+
+}
+
+.row button {
+  width: 60px;
+  height: 40px;
+  border: none;
+  outline: none;
+  margin: 5px;
+  border-radius: 4px;
+  transition: 0.1s;
+  box-shadow: 5px 5px 8px #00000020, -5px -5px 8px #ffff;
+}
+
+.row button:hover {
+  box-shadow: inset 5px 5px 8px #1010101a, inset -5px -5px 8px #fff;
+}
+
+/* .row button:focus{
+  box-shadow: inset 5px 5px 8px #1010101a, inset -5px -5px 8px #fff;
+} */
+
+#ce {
+  background: hsl(330, 100%, 60%);
+  color: #fff;
+  box-shadow: inset 5px 5px 8px hsl(330, 100%, 70%),
+    inset -5px -5px 8px hsl(330, 100%, 45%);
+}
+#ce:hover {
+  box-shadow: inset 5px 5px 8px hsl(330, 100%, 45%),
+    inset -5px -5px 8px hsl(330, 100%, 60%);
+}
+
+#ac {
+  background: hsl(30, 100%, 60%);
+  color: #fff;
+  box-shadow: inset 5px 5px 8px hsl(30, 100%, 70%),
+    inset -5px -5px 8px hsl(30, 100%, 45%);
+}
+#ac:hover {
+  box-shadow: inset 5px 5px 8px hsl(30, 100%, 45%),
+    inset -5px -5px 8px hsl(30, 100%, 60%);
+}
+
+#eval {
+  background: hsl(195, 100%, 60%);
+  color: #fff;
+  box-shadow: inset 5px 5px 8px hsl(195, 100%, 70%),
+    inset -5px -5px 8px hsl(195, 100%, 45%);
+}
+#eval:hover {
+  box-shadow: inset 5px 5px 8px hsl(195, 100%, 45%),
+    inset -5px -5px 8px hsl(195, 100%, 60%);
+}
+
+.mobile{
+  display: none;
+}
+
+@media (width < 550px){
+  .container{
+    width: 80vw;
+  }
+
+  .row button:nth-child(2){
+    display: none;
+  }
+
+  .mobile{
+    display: revert;
+  }
+  .mobile button:nth-child(2){
+    display: revert;
+  }
+
+  .row button{
+    width: 13vw;
+  }
+}
